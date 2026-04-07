@@ -29,37 +29,76 @@ public class GrapheListe {
         }
         return false; // Si le sommet n'a pas pu etre ajoute dans le graphe.
     }
+    /*
+     Ajoute un arc entre un sommet A et sommet B, sans pondération
+     @param NodeA Le sommet de départ
+     @param NodeB le sommet de fin
+     */
     public void addEdge(String NodeA, String NodeB) {
-        //Vérifie si le noeud n'est pas déjà dans le graphe.
-        // IMPLEMENTER VERIFICATION.
        GrapheListe SourceNode = this.sommetsListe.get(NodeA);
-       SourceNode.addNode(NodeB);
+       GrapheListe EndNode = this.sommetsListe.get(NodeB);
+       if(SourceNode != null && EndNode != null) {
+        if(!sourceNode.getSuccesseurs.contains(NodeB)) {
+            SourceNode.getSuccesseurs().add(NobeB);
+        } else {
+            System.out.println("Erreur d'ajout de l'arrete");
+        }
+        }
     }
     /*
        * Affiche les voisins d'un noeud par le biais d'un itérateur
        * @param Node
      */
     public void neighbors(String Node) {
+        GrapheListe SommetCible = this.sommetsListe.get(Node);
+        if(SommetCible != null) {
+            System.out.println("voisins du sommet " + SommetCible);
+            System.line.seperator();
+            //Création Itérateur pour parcourir les sommets.
+            Iterator<String> Iterateur = SommetCible.getSuccesseurs().Iterator;
+
+            while(Iterateur.hasNext()) {
+                String Voisins = Iterateur.next();
+                System.out.println(Voisins + " ");
+            } else {
+                System.out.println("Le sommet " + Node + " N'existe pas dans ce graphe.");
+            }
+
+        }
 
     }
-    public void contains(String Node) {
-
+    /*
+    * Vérifie si le sommet entré en paramètre est bien présent dans le graphe, et retourne true si vrai, false sinon.
+    * @param Node
+    * @return True si vrai, false sinon.
+     */
+    public boolean contains(String Node) {
+        return this.sommetsListe.containsKey(Node); // Si le sommet est bien présent, il retourne true, sinon false.
     }
+/*
+* Affiche la liste de tous les sommets enregistres dans un graphe sans ordre particulier.
+ */
     public void nodes() {
-
+        System.out.println("Liste des sommets :");
+        System.lineSeperator();
+        for(NomSommet: this.sommetsListe.keySet()) {
+            System.out.println("- " + nomSommet);
+        }
     }
 
     @Override
+    // Representation textuelle du graphe en forme de liste d'adjacence.
     public String toString() {
-        return "Liste des sommets du graphe " +
-                "Sommet '" + etiquetteSommet + '\'' +
-                " sucesseurs " + successeurs +
-                '}';
+        return "Sommet '" + etiquetteSommet + "' -> successeurs: " + successeurs;
     }
-
+    //Getters
     public String getEtiquetteSommet() {
         return etiquetteSommet;
     }
-    public ArrayList<String> getSuccesseurs() {return this.successeurs;}
-    public Map<String, GrapheListe> getSommetsListe() {return this.sommetsListe;}
+    public ArrayList<String> getSuccesseurs() {
+        return this.successeurs;
+    }
+    public Map<String, GrapheListe> getSommetsListe() {
+        return this.sommetsListe;
+    }
 }

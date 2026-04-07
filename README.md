@@ -1,4 +1,4 @@
-# SAE-2.01 | Conception d'un graphe orienté
+# SAE-2.02 | Conception d'un graphe orienté
 Développement de graphes, et utilisation du langage JAVA.
 # Equipe constituant cette SAE :
  - Nathan CHAPEL

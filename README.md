@@ -7,6 +7,6 @@ Développement de graphes, et utilisation du langage JAVA.
 # Synthèse de la SAE
   L'objectif de cette SAE est de développer une application intéractive qui possède 2 classes représentant deux modes de représentation différent d'un graphe orienté sans pondération.
 # Méthodes de représentation:
- - Graphe par liste d'adjacence
- - Graphe par matrice d'adjacence
+ - graphe par liste d'adjacence
+ - graphe par matrice d'adjacence
 

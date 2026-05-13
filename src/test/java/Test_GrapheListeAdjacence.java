@@ -1,4 +1,4 @@
-import Graphe.GrapheListe;
+import graphe.GrapheListe;
 
 public class Test_GrapheListeAdjacence {
 

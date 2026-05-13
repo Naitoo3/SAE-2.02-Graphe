@@ -1,5 +1,5 @@
 
-import Graphe.GrapheMatriciel;
+import graphe.GrapheMatriciel;
 import org.junit.jupiter.api.Test;
 
 public class Test_GrapheMatriciel {

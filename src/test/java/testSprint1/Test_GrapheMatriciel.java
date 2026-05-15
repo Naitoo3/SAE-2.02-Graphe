@@ -1,3 +1,4 @@
+package testSprint1;
 
 import Graphe.GrapheMatriciel;
 import org.junit.jupiter.api.Test;

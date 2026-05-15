@@ -5,16 +5,27 @@ import grapheSprintFinal.modele.*;
 import java.util.*;
 
     public final class Graphe implements IGraphe {
-
         private final Set<IEntite> entites = new HashSet<>();
         private final Map<IEntite, Set<RelationSortante>> sortantes = new HashMap<>();
         private final Map<IEntite, Set<RelationEntrante>> entrantes = new HashMap<>();
 
+        /**
+         * Ajoute une entite à un graphe vide
+         * @param entite - une entite sommet
+         * @return True si elle est ajoutée au graphe.
+         */
         @Override
         public boolean ajouterEntite(IEntite entite) {
             return entites.add(entite);
         }
 
+        /**
+         * Ajout d'une relation de type différent pour chaque arrête.
+         * @param source
+         * @param cible
+         * @param nature
+         * @return
+         */
         @Override
         public boolean ajouterRelation(IEntite source, IEntite cible, NatureRelation nature) {
             // Ajouter automatiquement les entités si absentes

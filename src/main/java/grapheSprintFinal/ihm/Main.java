@@ -1,5 +1,6 @@
 package grapheSprintFinal.ihm;
 
+import grapheSprintFinal.impl.Graphe;
 import grapheSprintFinal.outils.ImporteurPlantUml;
 import grapheSprintFinal.modele.IGraphe;
 import grapheSprintFinal.outils.ExportPlantUml;

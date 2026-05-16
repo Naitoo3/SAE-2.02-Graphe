@@ -18,5 +18,6 @@ Développement de graphes, et utilisation du langage JAVA.
 # Mise en route pour la recette :
 - Créer un projet MAVEN, importer les sources
 - Utiliser Java-25
+- Bien vérifier à importer l'ensemble des classes dans chacun des fichiers avant d'exécuter les tests.
 
 
